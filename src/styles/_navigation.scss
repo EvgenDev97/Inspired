@@ -1,0 +1,16 @@
+@import "./var";
+.navigation{
+    margin-bottom: 48px;
+
+    @include laptop{
+        margin-bottom: 36px;
+    }
+
+    @include tablet{
+        margin-bottom: 36px;
+    }
+
+    @include mobile{
+        margin-bottom: 16px;
+    }
+}

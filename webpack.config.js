@@ -14,7 +14,7 @@ module.exports = {
   target,
   devtool,
   devServer: {
-    port: 8080,
+    port: 80,
     open: true,
     hot: true,
   },
@@ -42,7 +42,8 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          // devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "style-loader",
           // Translates CSS into CommonJS
           "css-loader",
           {

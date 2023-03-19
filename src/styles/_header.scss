@@ -1,3 +1,74 @@
+@import "/src/styles/var";
+
 .header{
     padding: 24px 0 36px;
+    @include tablet{
+        padding: 16px 0;
+    }
+
+    .header__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .header__phone{
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 600;
+
+            @include tablet{
+                font-size: 12px;
+                line-height: 15px;
+            }
+
+            @include mobile{
+                display: none;
+            }
+            
+        }
+
+        .header__logo{
+            justify-self: center;
+
+            @include tablet{
+                max-width: 154px;
+            }
+
+            @include mobile{
+                max-width: 124px;
+                justify-self: start;
+            }
+        }
+
+        .header__nav{
+            justify-self: end;
+            
+            .header__nav-list{
+                display: flex;
+                gap: 24px;
+                align-items: center;
+
+                @include mobile {
+                    gap:16px;
+                }
+                
+                .header_link{
+                    transition: color 0.3s ease-in-out;
+                    &:hover, &:focus{
+                        background-color: rgb(235, 170, 170);
+                        border-radius: 50%;
+                        opacity: 80%;
+                    }
+                    img:hover, img:focus{
+                        background-color: rgb(235, 170, 170);
+                        border-radius: 50%;
+                        opacity: 80%;
+                    }
+                }
+            }
+        }
+    }
 }
