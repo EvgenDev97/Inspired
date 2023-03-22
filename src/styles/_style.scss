@@ -69,17 +69,7 @@ iframe {
     transform: scale(0);
 }
 
-main{
-    margin-bottom: 120px;
-    
-    @include tablet {
-        margin-bottom: 80px;
-    }
 
-    @include mobile{
-        margin-bottom: 60px;
-    }  
-}
 
 .container {
     --max-width: 1180px;
@@ -89,4 +79,16 @@ main{
     margin: 0 auto;
 
      
+}
+
+main {
+    margin-bottom: 120px;
+
+    @include tablet {
+        margin-bottom: 80px;
+    }
+
+    @include mobile {
+        margin-bottom: 60px;
+    }
 }

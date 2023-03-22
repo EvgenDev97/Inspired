@@ -1,0 +1,28 @@
+.footer-social{
+
+
+
+    &__title{
+        font-size: 18px;
+        line-height: 22px;
+
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+
+    .footer__socal-subtitle{
+        padding-bottom: 16px;
+
+        @include mobile{
+            padding-bottom: 8px;
+        }
+    }
+
+    .footer-social__list{
+        display: flex;
+        gap: 10px;
+    }
+
+    
+}
